@@ -2,6 +2,7 @@ import styles from "../style";
 import { questions } from "../constants/index.js";
 import { useState } from "react";
 import Questions from "./Questions";
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
     const [text, setText] = useState("")
@@ -38,6 +39,19 @@ const Hero = () => {
         <div className="absolute z-[1] w-[80%] h-[80%] rounded-full white__gradient bottom-40" />
         <div className="absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 blue__gradient" />
         {/* gradient end */}
+        <span className ={`text-4xl font-[64px] min-h-[300px] ml-20 bold`}>
+        <Typewriter 
+        
+        words={questions}
+        loop={0}
+        cursor
+        typeSpeed={50}
+        deleteSpeed={5}
+        delaySpeed={1200}
+        
+        />
+        </span>
+        
    </div>
     </section>
    );
